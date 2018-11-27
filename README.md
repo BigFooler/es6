@@ -36,4 +36,5 @@ let {a,b,c} = obj;
 - 遍历 for of 
 - includes/startWidth/endsWidth
 - padStart/padEnd `"x".padStart(4,"a")//aaax`
+- 模板字符串 
 
