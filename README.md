@@ -38,3 +38,9 @@ let {a,b,c} = obj;
 - padStart/padEnd `"x".padStart(4,"a")//aaax`
 - 模板字符串 
 
+### 扩展运算符 ...
+- 将数组展开为逗号分割的序列 `console.log(...[1,2,3]) // 1 2 3`
+- 主要应用：`funcition fun(...[arr])`
+- 主要应用（复制数组）：`let arr1 = [1,2,3] ;let arr2 = [...arr1]`
+- 主要应用（结构赋值）： `let [a, ...rest] = [1,2,3,4] // a 1 rest [2,3,4]`
+- 主要应用（字符串）： `[..."hello"] // ["h","e","l","l","o"]`
