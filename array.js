@@ -9,3 +9,15 @@ console.log(arr1,arr2)
 let [a,...rest] = ["na",23,4,'String'];
 console.log(a,rest)
 console.log([..."hello"])
+let arrayLike = {
+    '0': 'a',
+    '1': 'b',
+    '2': 'c',
+    length:3
+};
+console.log(Array.from(arrayLike))
+
+let v = [1,2,3,4].find((v)=>{
+    return v > 3
+})
+console.log(v)

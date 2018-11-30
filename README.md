@@ -44,3 +44,28 @@ let {a,b,c} = obj;
 - 主要应用（复制数组）：`let arr1 = [1,2,3] ;let arr2 = [...arr1]`
 - 主要应用（结构赋值）： `let [a, ...rest] = [1,2,3,4] // a 1 rest [2,3,4]`
 - 主要应用（字符串）： `[..."hello"] // ["h","e","l","l","o"]`
+
+### Array
+- Array.from() 将类数组对象以及可遍历的对象转为真正的数组(有length属性的对象)
+```
+let arrayLike = {
+    "a" : 1,
+    "b" : 2,
+    length:2
+}
+Array.from(arrayLike) // [1,2]
+
+Array.from([1, 2, 3], (x) => x * x) // [1,4,9] //接收第二个参数 作用类似map方法
+```
+
+- Array.of() 将一组值转为数组 
+```
+Array.of(3,3,4) //[3,3,4]
+```
+- 数组实例的find方法和findIndex方法 find返回满足条件的值，没有返回undefined;findIndex返回下标没有返回-1
+```
+[1,2,3,4].find((v)=>{
+   return  v > 3
+})
+// 4
+```
