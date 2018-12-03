@@ -36,3 +36,17 @@ let restJson = {
 }
 let restNewJson = {...restJson};
 console.log(restNewJson)
+
+/**
+ * Object.keys(obj) return []
+ */
+
+let keyObj = {
+    name: 'qb',
+    age: 27,
+    [Symbol()]:18,
+    [Symbol()]: 23
+}
+let keysArray = Object.keys(keyObj)
+let symbolArray = Object.getOwnPropertySymbols(keyObj)
+console.log(symbolArray[0])

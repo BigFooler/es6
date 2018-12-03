@@ -70,3 +70,17 @@ Array.of(3,3,4) //[3,3,4]
 // 4
 ```
 - 数据实例的includes() 检测数组是否包含某个值 返回Boolean,第二个参数表示开始检测的位置
+
+### 对象
+- 属性名表达式
+```
+let key = "foo"
+let obj = {
+    [key]: true
+}
+```
+- 属性遍历 5种方法
+- for...in 遍历自身和继承的可枚举属性（不包含Symbol属性）
+- Object.keys(obj) 返回一个数组，包括对象自身的（不包含继承的）所有可枚举属性（不包含Symbol属性）的键名
+- Object.getOwnPropertyNames(obj) 返回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名
+- Object.getOwnPropertySymbols(obj) 返回一个数组，包含对象自身的所有 Symbol 属性的键名
