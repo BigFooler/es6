@@ -84,3 +84,64 @@ let obj = {
 - Object.keys(obj) 返回一个数组，包括对象自身的（不包含继承的）所有可枚举属性（不包含Symbol属性）的键名
 - Object.getOwnPropertyNames(obj) 返回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名
 - Object.getOwnPropertySymbols(obj) 返回一个数组，包含对象自身的所有 Symbol 属性的键名
+- Reflect.ownKeys(obj) 返回一个数组，包含所有键名
+
+- super关键字 指向当前对象的原型对象，只能用在对象的方法中
+- 对象的扩展运算（...）
+- 合并两个对象 `let obj = {...obj1, ...obj2}`
+
+### 对象新增的方法
+- Object.is() 比较两个值是否相等
+- Object.assign(target, source1, source2) 将源对象（source）的所有可枚举属性，复制到目标对象（target）
+-  `Object.assign([1,2,3],[4,5]) //[4,5,3]`
+```
+Object.assign(obj.prototype,{ //为对象添加方法
+    method1(){
+
+    },
+    method2(){
+
+    }
+})
+```
+- Object.getOwnPropertyDescriptors(obj) //返回对象所有自身属性（非继承属性）的描述对象
+- Object.setPrototypeOf(obj,prototypeObj) //设置obj的原型对象为prototypeObj 返回obj自身
+- Object.getPrototypeOf(obj) //返回obj的原型对象
+- Object.keys()
+- Object.values()
+- Object.entries()
+- Object.fromEntries() //将一个键值对数组转为对象
+```
+Object.fromEntries([
+    ["name","bar"],
+    ["age",28]
+])
+// {
+    name:"bar",
+    age: 28
+}
+```
+
+### Set 新的数据结构
+- 类似于数组，但是没有重复的值 
+```
+[...new Set(array)] //出去重复值
+```
+
+### Map 
+- 类似于对象，但是可以使用任何类型的值作为键
+
+### Reflect对象
+- Reflect.apply(target, thisArg, args)
+- Reflect.construct(target, args)
+- Reflect.get(target, name, receiver)
+- Reflect.set(target, name, value, receiver)
+- Reflect.defineProperty(target, name, desc)
+- Reflect.deleteProperty(target, name)
+- Reflect.has(target, name)
+- Reflect.ownKeys(target)
+- Reflect.isExtensible(target)
+- Reflect.preventExtensions(target)
+- Reflect.getOwnPropertyDescriptor(target, name)
+- Reflect.getPrototypeOf(target)
+- Reflect.setPrototypeOf(target, prototype)

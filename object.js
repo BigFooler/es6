@@ -49,4 +49,17 @@ let keyObj = {
 }
 let keysArray = Object.keys(keyObj)
 let symbolArray = Object.getOwnPropertySymbols(keyObj)
-console.log(symbolArray[0])
+let reflectArray = Reflect.ownKeys(keyObj)
+console.log(reflectArray)
+
+let spreadObj = {...[1,2,3]}
+console.log(spreadObj)
+
+let prototypeObj = Object.setPrototypeOf({},null)
+console.log(prototypeObj)
+
+let entryObj = Object.fromEntries([ //兼容性问题
+    ["name","qbj"],
+    ["age",28]
+])
+console.log(entryObj)
