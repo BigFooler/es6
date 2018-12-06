@@ -145,3 +145,22 @@ Object.fromEntries([
 - Reflect.getOwnPropertyDescriptor(target, name)
 - Reflect.getPrototypeOf(target)
 - Reflect.setPrototypeOf(target, prototype)
+
+### export 
+- `export const a = 1`
+
+### es6编程风格
+- let 取代var
+- `let [a,b,c] = [1,3,4]`
+- 静态字符串一律使用单引号或者反引号，不要使用双引号
+```
+const arr = [1,23,,3,4]
+const [one, second] = arr
+//单行定义的对象末尾不使用逗号，多行定义的对象末尾使用逗号
+const a = { k1: v1, k2: v2 };
+const b = {
+  k1: v1,
+  k2: v2,
+};
+```
+- 
